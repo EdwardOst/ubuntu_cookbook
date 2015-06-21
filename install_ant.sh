@@ -17,7 +17,7 @@ echo "test"
 tempdir=`mktemp -d --tmpdir=.`
 wget -P${tempdir} ${ant_url}
 
-sudo mkdir ${ant_dir}
+sudo mkdir -p ${ant_dir}
 sudo chown ${owner}:${owner} ${ant_dir}
 tar xzf ${tempdir}/${ant_zipfile} --directory ${ant_dir_root}
 
