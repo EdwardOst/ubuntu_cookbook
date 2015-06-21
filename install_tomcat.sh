@@ -20,7 +20,7 @@ sudo useradd -r -s /usr/sbin/nologin ${tomcat_account}
 tempdir=`mktemp -d --tmpdir=.`
 wget -P${tempdir} ${tomcat_url}
 
-sudo mkdir ${tomcat_dir}
+sudo mkdir -p ${tomcat_dir}
 sudo chown ${owner}:${owner} ${tomcat_dir}
 tar xzf ${tempdir}/${tomcat_zipfile} --directory ${tomcat_dir_root}
 

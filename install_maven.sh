@@ -15,7 +15,7 @@ maven_url=http://archive.apache.org/dist/maven/maven-3/3.2.3/binaries/${maven_zi
 tempdir=`mktemp -d --tmpdir=.`
 wget -P${tempdir} ${maven_url}
 
-sudo mkdir ${maven_dir}
+sudo mkdir -p ${maven_dir}
 sudo chown ${owner}:${owner} ${maven_dir}
 tar xzf ${tempdir}/${maven_zipfile} --directory ${maven_dir_root}
 
