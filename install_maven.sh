@@ -23,6 +23,7 @@ sudo tee /etc/profile.d/maven.sh <<EOF
 export M2_HOME=${maven_dir}
 export PATH=\${PATH}:${maven_dir}/bin
 EOF
+source /etc/profile.d/maven.sh
 
 rm ${tempdir}/${maven_zipfile}
 rmdir ${tempdir}

@@ -25,6 +25,7 @@ sudo tee /etc/profile.d/ant.sh <<EOF
 export ANT_HOME=${ant_dir}
 export PATH=\${PATH}:${ant_dir}/bin
 EOF
+source /etc/profile.d/ant.sh
 
 rm ${tempdir}/${ant_zipfile}
 rmdir ${tempdir}
